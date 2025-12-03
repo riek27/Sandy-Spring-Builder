@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Gallery | Haven Homes | Luxury Home Builder</title>
+    <title>Portfolio Gallery | Sandy Spring Builders | Custom Home Builder</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="index.html" class="logo">Haven <span>Homes</span></a>
+                <a href="index.html" class="logo">Sandy Spring <span>Builders</span></a>
                 
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -65,10 +65,10 @@
     </div>
 
     <!-- Page Header -->
-    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(44, 44, 44, 0.7), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(44,44,44,0.7), rgba(44,44,44,0.7)), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
         <div class="hero-content">
             <h1>Our Portfolio</h1>
-            <p>A curated collection of our finest custom homes, renovations, and design projects.</p>
+            <p>A curated showcase of our finest custom homes, renovations, and design projects.</p>
         </div>
     </section>
 
@@ -184,9 +184,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Modern Elegance Meets Natural Beauty</h3>
-                    <p>This spectacular cliffside residence represents the pinnacle of our custom home building expertise. Perched dramatically above the ocean, the home was designed to maximize panoramic views while creating intimate, comfortable living spaces.</p>
-                    <p>The project presented significant engineering challenges due to the steep site, which we overcame with innovative foundation solutions and cantilevered design elements. Floor-to-ceiling glass walls provide uninterrupted ocean views while maintaining structural integrity and energy efficiency.</p>
-                    <p>Inside, the home features custom millwork throughout, premium European appliances, and a sophisticated smart home system that controls lighting, climate, security, and entertainment. The interior palette was carefully curated to complement the natural surroundings, with neutral tones and organic materials.</p>
+                    <p>This cliffside residence highlights Sandy Spring Builders’ expertise in custom home construction. Designed to maximize panoramic ocean views while creating intimate living spaces, the home blends innovation with comfort.</p>
+                    <p>Engineering challenges posed by the steep site were solved with advanced foundation solutions and cantilevered design. Floor-to-ceiling glass walls deliver uninterrupted views while ensuring energy efficiency and structural integrity.</p>
+                    <p>The interior features custom millwork, premium appliances, and a smart home system controlling lighting, climate, security, and entertainment. Neutral tones and natural materials complement the stunning surroundings.</p>
                     <a href="contact.html" class="btn">Start Your Project</a>
                 </div>
                 <div class="about-image">
@@ -201,8 +201,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">Haven <span>Homes</span></div>
-                    <p>Creating extraordinary living experiences through exceptional design, craftsmanship, and attention to detail.</p>
+                    <div class="footer-logo">Sandy Spring <span>Builders</span></div>
+                    <p>Delivering exceptional custom homes, renovations, and design projects with craftsmanship and attention to detail.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -240,7 +240,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Haven Homes. All Rights Reserved. | Luxury Home Builders</p>
+                <p>&copy; 2025 Sandy Spring Builders. All Rights Reserved. | Custom Home Builder</p>
             </div>
         </div>
     </footer>
@@ -269,9 +269,7 @@
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
                 button.classList.add('active');
                 
                 const filterValue = button.getAttribute('data-filter');
