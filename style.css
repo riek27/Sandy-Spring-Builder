@@ -1,4 +1,6 @@
-/* CSS Variables - Enhanced Luxury Palette */
+/* ---------------------------
+   CSS Variables - Enhanced Luxury Palette
+--------------------------- */
 :root {
     --charcoal: #1a1a1a;
     --gold: #c8a97e;
@@ -14,7 +16,9 @@
     --overlay: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(26, 26, 26, 0.7) 100%);
 }
 
-/* Reset & Base Styles */
+/* ---------------------------
+   Reset & Base Styles
+--------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -35,6 +39,9 @@ body {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* Add top padding equal to navbar height */
+    padding-top: 100px; /* Adjust if navbar height changes */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,40 +80,82 @@ section {
     position: relative;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 80px;
+/* ---------------------------
+   Navbar / Header
+--------------------------- */
+header {
+    position: fixed;           /* Keep navbar on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(20px);
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;           /* Navbar vertical padding */
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Dropdown styles */
+.dropdown {
     position: relative;
 }
 
-.section-title h2 {
-    font-size: 3.2rem;
-    color: var(--charcoal);
-    display: inline-block;
-    position: relative;
-    padding-bottom: 25px;
-}
-
-.section-title h2:after {
-    content: '';
+.dropdown-content {
+    display: none;
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 4px;
-    background: var(--gradient);
-    border-radius: 2px;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    z-index: 1000;
 }
 
-.section-title p {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 600px;
-    margin: 25px auto 0;
-    line-height: 1.6;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
+.dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--charcoal);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.dropdown-content a:hover {
+    background: var(--light-gray);
+}
+
+/* ---------------------------
+   Hero Section
+--------------------------- */
+.hero {
+    padding-top: 0; /* Already handled by body padding */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* ---------------------------
+   Buttons
+--------------------------- */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -163,29 +212,25 @@ section {
     transform: translateY(-8px);
 }
 
-/* Enhanced Navigation */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(26, 26, 26, 0.95);
-    backdrop-filter: blur(20px);
-    transition: var(--transition);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0;
-}
+/* ---------------------------
+   Responsive adjustments
+--------------------------- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 90px; /* adjust if navbar height shrinks */
+    }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 90%;
+    .navbar {
+        padding: 20px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
 }
+/* CSS Variables - Enhanced Luxury Palette */
 
 .logo {
     font-family: 'Playfair Display', serif;
